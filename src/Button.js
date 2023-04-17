@@ -14,7 +14,15 @@ export default function Button({
 }
 
 Button.propTypes = {
-  checkVariationValue: (props) => {
-    console.log(props);
+  checkVariationValue: ({ primary, secondary, success, danger, warning }) => {
+    const count =
+      Number(!!primary) +
+      Number(!!secondary) +
+      Number(!!success) +
+      Number(!!danger) +
+      Number(!!warning);
+    if (count > 1) {
+      return new Error("Only one of p, s, w , s ,d can be true");
+    }
   },
 };

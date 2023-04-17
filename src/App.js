@@ -4,7 +4,9 @@ export default function App() {
   return (
     <div>
       <div>
-        <Button>Click here!</Button>
+        <Button primary secondary>
+          Click here!
+        </Button>
       </div>
       <div>
         <Button>Buy Now!</Button>
