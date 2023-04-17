@@ -1,7 +1,20 @@
-export default function App(props) {
+import Button from "./Button";
+
+export default function App() {
   return (
     <div>
-      <h2>App</h2>
+      <div>
+        <Button>Click here!</Button>
+      </div>
+      <div>
+        <Button>Buy Now!</Button>
+      </div>
+      <div>
+        <Button>See Deal!</Button>
+      </div>
+      <div>
+        <Button>Hide Ads!</Button>
+      </div>
     </div>
   );
 }
