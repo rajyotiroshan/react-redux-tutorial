@@ -4,18 +4,20 @@ export default function App() {
   return (
     <div>
       <div>
-        <Button primary secondary>
-          Click here!
-        </Button>
+        <Button primary>Primay</Button>
       </div>
       <div>
-        <Button>Buy Now!</Button>
+        <Button secondary>Secondary</Button>
       </div>
       <div>
-        <Button>See Deal!</Button>
+        <Button warning>Warning</Button>
       </div>
       <div>
-        <Button>Hide Ads!</Button>
+        <Button danger>Danger</Button>
+      </div>
+
+      <div>
+        <Button success>Success</Button>
       </div>
     </div>
   );
