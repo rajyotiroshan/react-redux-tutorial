@@ -1,11 +1,17 @@
 import Button from "./Button";
 import { GoBell, GoCloudDownload, GoDatabase } from "react-icons/go";
 export default function App() {
+  const handleClick = () => {
+    console.log("Click !!!");
+  };
+  const mouseOver = () => {
+    console.log("Mouse Over !!!");
+  };
   return (
     <div className="btns">
       <div className="btnc-container">
         <div>
-          <Button primary>
+          <Button primary onClick={handleClick} onMouseOver={mouseOver}>
             <GoBell /> Primay
           </Button>
         </div>
