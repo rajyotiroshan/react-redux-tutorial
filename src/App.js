@@ -1,14 +1,19 @@
 import Button from "./Button";
-
+import { GoBell, GoCloudDownload, GoDatabase } from "react-icons/go";
 export default function App() {
   return (
     <div className="btns">
       <div className="btnc-container">
         <div>
-          <Button primary>Primay</Button>
+          <Button primary>
+            <GoBell /> Primay
+          </Button>
         </div>
         <div>
-          <Button secondary>Secondary</Button>
+          <Button secondary>
+            <GoCloudDownload />
+            Secondary
+          </Button>
         </div>
         <div>
           <Button warning>Warning</Button>
@@ -54,8 +59,8 @@ export default function App() {
       {/**Rounded */}
       <div className="btnc-container">
         <div>
-          <Button primary outline>
-            Primay
+          <Button primary>
+            <GoDatabase /> Primay
           </Button>
         </div>
         <div>
