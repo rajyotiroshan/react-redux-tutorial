@@ -2,8 +2,8 @@ import Button from "./Button";
 
 export default function App() {
   return (
-    <div>
-      <div>
+    <div className="btns">
+      <div className="btnc-container">
         <div>
           <Button primary>Primay</Button>
         </div>
@@ -22,7 +22,7 @@ export default function App() {
         </div>
       </div>
       {/**Rounded */}
-      <div>
+      <div className="btnc-container">
         <div>
           <Button primary rounded>
             Primay
@@ -52,7 +52,7 @@ export default function App() {
       </div>
 
       {/**Rounded */}
-      <div>
+      <div className="btnc-container">
         <div>
           <Button primary outline>
             Primay

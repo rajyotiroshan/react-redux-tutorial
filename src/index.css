@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.btns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btnc-container div {
+    margin-bottom: 10px;
+}
