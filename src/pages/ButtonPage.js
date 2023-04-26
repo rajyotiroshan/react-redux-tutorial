@@ -1,6 +1,6 @@
-import Button from "./components/Button";
+import Button from "../components/Button";
 import { GoBell, GoCloudDownload, GoDatabase } from "react-icons/go";
-export default function App() {
+export default function ButtonPage() {
   const handleClick = () => {
     console.log("Click !!!");
   };
