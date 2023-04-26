@@ -11,7 +11,7 @@ export default function App() {
     <div className="btns">
       <div className="btnc-container">
         <div>
-          <Button primary onClick={handleClick} onMouseOver={mouseOver}>
+          <Button className="" primary onClick={handleClick} onMouseOver={mouseOver}>
             <GoBell /> Primay
           </Button>
         </div>
