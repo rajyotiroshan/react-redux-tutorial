@@ -2,10 +2,14 @@ import { useState } from "react";
 import { GoChevronDown, GoChevronLeft } from "react-icons/go";
 
 export default function Accordion({ items }) {
-  const [expandedIndex, setExpandedIndex] = useState(1);
+  const [expandedIndex, setExpandedIndex] = useState(-1);
 
   const handleClick = (nxtIndex) => {
-    setExpandedIndex(nxtIndex);
+    if (expandedIndex === nxtIndex) {
+      setExpandedIndex(-1);
+    } else {
+      setExpandedIndex(nxtIndex);
+    }
   };
   const renderedItems = items.map((item, index) => {
     const isExpanded = index === expandedIndex;
