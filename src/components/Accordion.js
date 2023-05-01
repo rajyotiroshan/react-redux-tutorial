@@ -5,11 +5,19 @@ export default function Accordion({ items }) {
   const [expandedIndex, setExpandedIndex] = useState(-1);
 
   const handleClick = (nxtIndex) => {
-    if (expandedIndex === nxtIndex) {
+    setExpandedIndex((currExpInd) => {
+      if (currExpInd === nxtIndex) {
+        return -1;
+      } else {
+        return nxtIndex;
+      }
+    });
+    //gives stale updated index
+    /*     if (expandedIndex === nxtIndex) {
       setExpandedIndex(-1);
     } else {
       setExpandedIndex(nxtIndex);
-    }
+    } */
   };
   const renderedItems = items.map((item, index) => {
     const isExpanded = index === expandedIndex;
