@@ -4,6 +4,7 @@ import { useContext } from "react";
 export default function Link({ to, children }) {
   const { navigate } = useContext(NavigationContext);
   const handleClick = (evt) => {
+    if (evt.metaKey || evt.ctrlKey) return;
     //
     evt.preventDefault();
     //prog navigatet o someother app
@@ -11,5 +12,9 @@ export default function Link({ to, children }) {
   };
 
   //warning for href
-  return <a onClick={handleClick}>{children}</a>;
+  return (
+    <a href={to} onClick={handleClick}>
+      {children}
+    </a>
+  );
 }
