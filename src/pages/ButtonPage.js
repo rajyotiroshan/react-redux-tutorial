@@ -2,10 +2,10 @@ import Button from "../components/Button";
 import { GoBell, GoCloudDownload, GoDatabase } from "react-icons/go";
 export default function ButtonPage() {
   const handleClick = () => {
-    console.log("Click !!!");
+    //console.log("Click !!!");
   };
   const mouseOver = () => {
-    console.log("Mouse Over !!!");
+    //console.log("Mouse Over !!!");
   };
   return (
     <div className="btns">
