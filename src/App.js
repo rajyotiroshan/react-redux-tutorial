@@ -3,7 +3,7 @@ import AccordionPage from "./pages/AccordionPage";
 import DropdownPage from "./pages/DropdownPage";
 import ButtonPage from "./pages/ButtonPage";
 import Sidebar from "./components/Sidebar";
-
+import ModalPage from "./pages/ModalPage";
 export default function App() {
   return (
     <div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
@@ -20,6 +20,10 @@ export default function App() {
 
         <Route path="/buttons">
           <ButtonPage />
+        </Route>
+
+        <Route path="/modal">
+          <ModalPage />
         </Route>
       </div>
     </div>
