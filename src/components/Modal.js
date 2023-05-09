@@ -9,8 +9,9 @@ function Modal({ onClose, actionBar, children }) {
       ></div>
       {/** center window with bg white */}
       <div className="absolute inset-40 p-10 bg-white">
-        {children}
-        {actionBar}
+        <div className="flex flex-col justify-between h-full">{children}</div>
+
+        <div className="flex justify-end">{actionBar}</div>
       </div>
     </div>,
     document.querySelector(".modal-container")
