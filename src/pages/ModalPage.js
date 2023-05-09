@@ -8,7 +8,7 @@ export default function ModalPage() {
     setShowModal(!showModal);
   };
   return (
-    <div>
+    <div className="relative">
       <Button primary onClick={handleClick}>
         Open Modal
       </Button>
