@@ -1,4 +1,4 @@
-function Table({ data, config }) {
+function Table({ data, config, keyFun }) {
   const renderedHeader = config.map((column) => {
     return <th key={column.label}>{column.label}</th>;
   });
@@ -41,7 +41,7 @@ function Table({ data, config }) {
       );
     });
     return (
-      <tr key={d.name} className="border-b-2">
+      <tr key={keyFun(d)} className="border-b-2">
         {renderedCells}
       </tr>
     );

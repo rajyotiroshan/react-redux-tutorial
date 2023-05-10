@@ -14,16 +14,21 @@ function TablePage() {
     },
     {
       label: "Color",
-      render: (fruit) => <div className={`p-3 m-2 ${d.color}`}>{fruit.color}</div>,
+      render: (fruit) => <div className={`p-3 m-2 ${fruit.color}`}></div>,
     },
     {
       label: "Score",
       render: (fruit) => fruit.score,
     },
   ];
+
+  const keyFun = (fruit) => {
+    return fruit.name;
+  };
+
   return (
     <div>
-      <Table data={data} config={config} />
+      <Table data={data} config={config} keyFun={keyFun} />
     </div>
   );
 }
