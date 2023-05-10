@@ -1,4 +1,8 @@
-function Table({ data }) {
+function Table({ data, config }) {
+  const renderedHeader = config.map((column) => {
+    return <th key={column.label}>{column.label}</th>;
+  });
+
   const dataRow = data.map((d) => {
     return (
       <tr key={d.name} className="border-b-2">
@@ -13,11 +17,7 @@ function Table({ data }) {
   return (
     <table className="table-auto border-spacing-2">
       <thead>
-        <tr className="border-b-2">
-          <th>Fruit</th>
-          <th>Color</th>
-          <th>Score</th>
-        </tr>
+        <tr className="border-b-2">{renderedHeader}</tr>
       </thead>
       <tbody>{dataRow}</tbody>
     </table>
