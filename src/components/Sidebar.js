@@ -18,6 +18,10 @@ function Sidebar() {
       label: "Modal",
       path: "/modal",
     },
+    {
+      label: "Table",
+      path: "/table",
+    },
   ];
   const rendredLinks = links.map((link) => {
     return (
