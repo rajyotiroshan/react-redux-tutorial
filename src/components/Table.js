@@ -33,13 +33,16 @@ function Table({ data, config }) {
   }); */
 
   const renderedRows = data.map((d) => {
+    const renderedCells = config.map((col) => {
+      return (
+        <td key={col.label} className="p-2">
+          {col.render(d)}
+        </td>
+      );
+    });
     return (
       <tr key={d.name} className="border-b-2">
-        <td className="p-3">{config[0].render(d)}</td>
-        <td className="p-3">
-          <div className={`p-3 m-2 ${config[1].render(d)}`}></div>
-        </td>
-        <td className="p-3">{config[2].render(d)}</td>
+        {renderedCells}
       </tr>
     );
   });
