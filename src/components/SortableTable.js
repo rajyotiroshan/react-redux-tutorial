@@ -35,6 +35,7 @@ function getIcons(label, sortBy, sortOrder) {
 
 function SortableTable(props) {
   const { config, data } = props;
+
   const { sortBy, sortOrder, sortedData, setSortColumn } = useSort(
     data,
     config
